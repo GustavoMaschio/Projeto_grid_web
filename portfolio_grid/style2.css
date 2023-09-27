@@ -1,0 +1,121 @@
+/* Estilos do cabeçalho */
+header {
+    background-color: #250544;
+    color: #C9D5DB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+body {
+    background-color: #4a8623;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centralize horizontalmente */
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.logo span {
+    font-family: "Osake", sans-serif;
+    font-size: 50px; /* Tamanho da fonte */
+    margin-left: 10px; /* Espaçamento à esquerda */
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search button {
+    background-color: #4a8623;
+    border: none;
+    border-radius: 5px;
+    color: #C9D5DB;
+    cursor: pointer;
+    padding: 8px 20px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    /* Altere o número de colunas e o espaçamento para telas menores */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* Ajuste o tamanho da imagem para telas menores */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+    .logo span {
+        font-family: "Osake", sans-serif;
+        font-size: 20px; /* Tamanho da fonte */
+    }
+}
+
+/* Estilos para telas maiores */
+@media screen and (min-width: 769px) {
+    /* Defina o tamanho máximo das imagens para largura de tela */
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilize a imagem */
+.image img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #250544; /* Adicione uma borda com cor diretamente na imagem */
+    border-radius: 5px; /* Arredonde as bordas */
+    overflow: hidden; /* Esconda qualquer parte da legenda que fique fora da imagem */
+    max-width: calc(100% - 10px); /* Defina a largura máxima da imagem */
+}
+
+/* Estilize a legenda */
+.caption {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #C9D5DB;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0; /* A legenda estará oculta por padrão */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Quando passar o mouse sobre a imagem, a legenda aparecerá */
+.image:hover .caption {
+    opacity: 1;
+}
+
+@font-face {
+    font-family: "Osake";
+    src: url('.\fontes\Osake - FONTE MUITO PESADA!!!.ttf') format('truetype');
+}
